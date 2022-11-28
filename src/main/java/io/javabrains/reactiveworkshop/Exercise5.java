@@ -17,7 +17,7 @@ public class Exercise5 {
         Disposable subscribe = ReactiveSources.intNumbersFlux().subscribe(number -> System.out.println(number),
         										   err -> System.out.println(err.getMessage()),
         										   () -> System.out.println("Completed"));
-
+ 
         // Subscribe to a flux using an implementation of BaseSubscriber
         ReactiveSources.intNumbersFlux().subscribe(new MyScubscriber());
 
